@@ -86,6 +86,18 @@ MyCustomGame
 
 To find a game's process name, open Task Manager while the game is running and look under the "Details" tab.
 
+##### Custom Display Names
+
+You can specify a custom display name using the `|` delimiter. This name appears in alerts instead of the process name:
+
+```
+# Format: ProcessName|Display Name
+SomeGame-Win64-Shipping|Some Game
+AnotherTitle|My Favorite Fighter
+```
+
+The default games already have built-in friendly names, so you only need this for games you add yourself.
+
 #### Settings (settings.json)
 
 Important settings are configured through the app. Advanced users can edit `settings.json` directly:
@@ -214,6 +226,18 @@ MyCustomGame
 ```
 
 ゲームのプロセス名を確認するには、ゲーム実行中にタスクマネージャーを開き、「詳細」タブを確認してください。
+
+##### カスタム表示名
+
+`|`区切りでカスタム表示名を指定できます。この名前はプロセス名の代わりにアラートに表示されます：
+
+```
+# 形式: プロセス名|表示名
+SomeGame-Win64-Shipping|Some Game
+AnotherTitle|お気に入りの格ゲー
+```
+
+デフォルトのゲームにはすでにフレンドリーな名前が組み込まれているため、自分で追加したゲームにのみこの機能が必要です。
 
 #### 設定 (settings.json)
 
