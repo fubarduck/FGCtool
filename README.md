@@ -141,7 +141,11 @@ Developed by [@fubarduck](https://twitter.com/fubarduck) for the FGC.
 
 ### License
 
-Freeware. Free to use and distribute for personal and commercial purposes. No warranty provided.
+Freeware — free to use and distribute for personal and commercial purposes.
+
+This repository contains binary releases only; source code is not available.
+
+No warranty provided.
 
 ---
 
@@ -282,4 +286,8 @@ AnotherTitle|お気に入りの格ゲー
 
 ### ライセンス
 
-フリーウェア。個人および商用目的で自由に使用・配布できます。保証はありません。
+フリーウェア — 個人および商用目的で自由に使用・配布できます。
+
+このリポジトリにはバイナリリリースのみが含まれています。ソースコードは公開されていません。
+
+保証はありません。
