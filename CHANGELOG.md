@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1] - 2026-02-01
+
+### New Features
+- **Expanded controller support**: Added support for DualShock 4, PS5 DualSense, Nintendo Switch Pro, and Nintendo Switch 2 Pro Controllers
+- **Configurable per-game startup delay**: Set custom delays in `games.txt` for games with long loading screens
+- **Hot-reload for games.txt**: Changes are applied automatically without restarting the app
+
+### Improvements
+- Controller hotkey now requires a long press to prevent accidental triggers during gameplay
+- Status overlay now waits for game window to be ready before appearing
+- Improved overlay positioning for games with exclusive loading screens
+- Custom display names now work even when matching the process name
+
+### Bug Fixes
+- Fixed startup overlay not appearing over games with exclusive loading screens
+- Fixed audio restore not triggering reliably in some scenarios
+
 ## [1.0.2] - 2025-01-24
 
 ### Bug Fixes

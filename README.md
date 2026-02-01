@@ -24,6 +24,16 @@ A Windows utility for the fighting game community that ensures your PC is runnin
 - Automatically restores your preferred audio device
 - Quick access to change audio output
 
+#### Controller Hotkey
+- Do a long press on the Select/Back/Share/Minus button to show the status overlay
+- Supported controllers:
+  - Xbox controllers (Back button)
+  - DualShock 4 (Share button)
+  - PS5 DualSense (Share button, USB only)
+  - Nintendo Switch Pro Controller (Minus button, USB only)
+  - Nintendo Switch 2 Pro Controller (Minus button, USB only)
+  - Most fighting game controllers (Back/Share must use default button mapping)
+
 #### System Tray
 - Runs quietly in the background
 - Double-click tray icon to open settings
@@ -36,8 +46,6 @@ A Windows utility for the fighting game community that ensures your PC is runnin
 ### Minimum Requirements
 OS: Windows 10 or Windows 11 (64-bit)
 All dependencies are included in the .exe file.
-
-Controller: An XInput controller with 'Select' button is required for the hotkey overlay feature.
 
 ### Installation
 
@@ -86,6 +94,8 @@ MyCustomGame
 
 To find a game's process name, open Task Manager while the game is running and look under the "Details" tab.
 
+**Hot-reload:** Changes to `games.txt` are applied automatically within 1 second. No need to restart the app.
+
 ##### Custom Display Names
 
 You can specify a custom display name using the `|` delimiter. This name appears in alerts instead of the process name:
@@ -97,6 +107,18 @@ AnotherTitle|My Favorite Fighter
 ```
 
 The default games already have built-in friendly names, so you only need this for games you add yourself.
+
+##### Startup Delay
+
+Some games have exclusive loading screens that block overlays. You can configure how long to wait before showing the status overlay:
+
+```
+# Format: ProcessName||delay=N  (N = seconds, 5-30)
+MySlowGame||delay=15
+MyGame|Custom Name|delay=10
+```
+
+The default delay is 6 seconds. Built-in games like Guilty Gear Strive (12s) and Tekken 8 (9s) have appropriate defaults, but you can override them if needed.
 
 #### Settings (settings.json)
 
@@ -141,11 +163,7 @@ Developed by [@fubarduck](https://twitter.com/fubarduck) for the FGC.
 
 ### License
 
-Freeware — free to use and distribute for personal and commercial purposes.
-
-This repository contains binary releases only; source code is not available.
-
-No warranty provided.
+Freeware. Free to use and distribute for personal and commercial purposes. No warranty provided.
 
 ---
 
@@ -169,6 +187,16 @@ No warranty provided.
 - 優先オーディオデバイスを自動的に復元
 - オーディオ出力の素早い変更
 
+#### コントローラーホットキー
+- Select/Back/Share/Minusボタンを長押しでステータスオーバーレイを表示
+- 対応コントローラー:
+  - Xboxコントローラー（Backボタン）
+  - DualShock 4（Shareボタン）
+  - PS5 DualSense（Shareボタン、USB接続のみ）
+  - Nintendo Switch Proコントローラー（Minusボタン、USB接続のみ）
+  - Nintendo Switch 2 Proコントローラー（Minusボタン、USB接続のみ）
+  - ほとんどの格闘ゲームコントローラー（Back/Shareがデフォルトのボタン配置である必要あり）
+
 #### システムトレイ
 - バックグラウンドで静かに動作
 - トレイアイコンをダブルクリックで設定を開く
@@ -181,8 +209,6 @@ No warranty provided.
 ### 動作環境
 OS: Windows 10またはWindows 11（64ビット）
 すべての依存関係は.exeファイルに含まれています。
-
-コントローラー: ホットキーオーバーレイ機能には「Select」ボタン付きのXInputコントローラーが必要です。
 
 ### インストール
 
@@ -231,6 +257,8 @@ MyCustomGame
 
 ゲームのプロセス名を確認するには、ゲーム実行中にタスクマネージャーを開き、「詳細」タブを確認してください。
 
+**ホットリロード:** `games.txt`への変更は1秒以内に自動的に適用されます。アプリの再起動は不要です。
+
 ##### カスタム表示名
 
 `|`区切りでカスタム表示名を指定できます。この名前はプロセス名の代わりにアラートに表示されます：
@@ -242,6 +270,18 @@ AnotherTitle|お気に入りの格ゲー
 ```
 
 デフォルトのゲームにはすでにフレンドリーな名前が組み込まれているため、自分で追加したゲームにのみこの機能が必要です。
+
+##### 起動遅延
+
+一部のゲームはオーバーレイをブロックする専用のローディング画面があります。ステータスオーバーレイを表示するまでの待機時間を設定できます：
+
+```
+# 形式: プロセス名||delay=N  (N = 秒数、5-30)
+MySlowGame||delay=15
+MyGame|カスタム名|delay=10
+```
+
+デフォルトの遅延は6秒です。GUILTY GEAR -STRIVE-（12秒）や鉄拳8（9秒）などの組み込みゲームには適切なデフォルトがありますが、必要に応じて上書きできます。
 
 #### 設定 (settings.json)
 
@@ -286,8 +326,4 @@ AnotherTitle|お気に入りの格ゲー
 
 ### ライセンス
 
-フリーウェア — 個人および商用目的で自由に使用・配布できます。
-
-このリポジトリにはバイナリリリースのみが含まれています。ソースコードは公開されていません。
-
-保証はありません。
+フリーウェア。個人および商用目的で自由に使用・配布できます。保証はありません。

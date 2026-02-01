@@ -4,5 +4,6 @@
 # Except these files
 !README.md
 !CHANGELOG.md
+!ARCHITECTURE.md
 !LICENSE
 !.gitignore
