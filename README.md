@@ -1,4 +1,6 @@
 # FGC Tool
+![IMG_0987_small](https://github.com/user-attachments/assets/86b4e60a-017c-4302-8c0d-55e057e2bee1)
+![IMG_0992_small](https://github.com/user-attachments/assets/2c631f50-f00d-4fd6-8842-ec806fb9f24e)
 
 **[English](#english) | [日本語](#japanese)**
 
