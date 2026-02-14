@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.2] - 2026-02-14
+
+### Bug Fixes
+- Fixed regression where in-game overlays failed to appear on DPI-scaled displays
+- Fixed status/audio overlays sometimes staying behind game surfaces by reasserting topmost on overlay reuse
+- Fixed refresh rate evaluation using unstable runtime values in exclusive fullscreen/VRR scenarios
+- Fixed 119Hz/120Hz inconsistencies by applying shared refresh-rate normalization logic across status evaluation and overlays
+
+### Improvements
+- Treat game-imposed 120Hz runtime caps (when desktop is already at max) as "meets requirement" with green status
+- Added overlay message for runtime-limited caps: `120Hz (Exclusive Fullscreen cap)` (localized EN/JA)
+- Made display warning popup non-activating to reduce focus/input disruption over fullscreen games
+
+## [1.1.1] - 2026-02-12
+
+### Bug Fixes
+- Fixed game detection popups and controller hotkey overlays not appearing above games in autostart mode
+- Fixed audio takeover not detecting the default audio device when autostarted during Windows boot
+
 ## [1.1] - 2026-02-01
 
 ### New Features
